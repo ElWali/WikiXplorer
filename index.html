@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ويكي إكسبلور — استكشف ويكيبيديا بالعربية</title>
+  <meta name="description" content="استكشف مقالات ويكيبيديا بالعربية بسهولة: بحث سريع، الأكثر شيوعًا اليوم، ومقالة عشوائية." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <a class="brand" href="./index.html" aria-label="ويكي إكسبلور">ويكي إكسبلور</a>
+    <nav class="nav">
+      <a href="./index.html">الرئيسية</a>
+      <a href="./map.html">أماكن قريبة</a>
+      <a href="./about.html">نبذة</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 class="hero-title">استكشف ويكيبيديا بطريقة ممتعة وسريعة</h1>
+      <form class="search-bar" action="./search.html" method="get" role="search">
+        <input name="q" required placeholder="ابحث في ويكيبيديا…" aria-label="ابحث في ويكيبيديا" />
+        <button class="btn">
+          <span class="icon icon-search" aria-hidden="true"></span>
+          بحث
+        </button>
+      </form>
+      <p class="muted small">المحتوى من ويكيبيديا — رخصة CC BY-SA • لسنا تابعين لمؤسسة ويكيميديا</p>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2><span class="icon icon-trending" aria-hidden="true"></span> الأكثر شيوعًا اليوم</h2>
+        <small id="trendingUpdated" class="muted"></small>
+      </div>
+      <div id="trendingGrid" class="grid"></div>
+    </section>
+
+    <section class="section">
+      <h2><span class="icon icon-dice" aria-hidden="true"></span> مقالة عشوائية</h2>
+      <article id="randomCard" class="card card-row"></article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    المحتوى من ويكيبيديا — رخصة CC BY-SA • الصور حسب تراخيصها على ويكيبيديا • لسنا تابعين لمؤسسة ويكيميديا
+  </footer>
+
+  <script src="./assets/app.js" defer></script>
+</body>
+</html>
