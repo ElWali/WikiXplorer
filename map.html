@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>أماكن قريبة — ويكي إكسبلور</title>
+  <meta name="description" content="استكشف مقالات ويكيبيديا القريبة على الخريطة مع شريط جانبي للمعلومات والصور والروابط." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+</head>
+<body data-page="map">
+  <header class="site-header">
+    <a class="brand" href="./index.html">ويكي إكسبلور</a>
+    <nav class="nav">
+      <a href="./index.html">الرئيسية</a>
+      <a href="./map.html">أماكن قريبة</a>
+      <a href="./about.html">نبذة</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <div class="map-layout">
+        <aside class="sidebar">
+          <div class="sidebar-head">
+            <h1 class="mb-0">أماكن قريبة</h1>
+            <p class="muted small">حرّك الخريطة لاستكشاف مقالات قريبة. الموقع يظهر في الرابط (hash).</p>
+          </div>
+          <div id="nearbyList" class="nearby-list"></div>
+        </aside>
+        <div id="map" class="map"></div>
+      </div>
+
+      <div id="infoPanel" class="info-panel" hidden>
+        <button id="closePanel" class="panel-close" aria-label="إغلاق">×</button>
+        <div id="panelBody"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    خرائط © OpenStreetMap contributors • المحتوى من ويكيبيديا — رخصة CC BY-SA • لسنا تابعين لمؤسسة ويكيميديا
+  </footer>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="./assets/app.js" defer></script>
+</body>
+</html>
